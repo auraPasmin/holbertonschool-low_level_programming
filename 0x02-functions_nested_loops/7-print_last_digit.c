@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * print_last_digit - print the last number
+ *@p: take a int
+ * Return: p
  */
 int print_last_digit(int p)
 {
