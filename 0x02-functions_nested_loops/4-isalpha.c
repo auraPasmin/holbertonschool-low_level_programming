@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * _isalpha - return 1 if c is lowcase or capital letter
+ *@c: take a int
+ * Return: 1 or 0
  */
 int _isalpha(int c)
 {
