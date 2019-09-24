@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * _islower - return 1 if lowcase
+ *@c: take a  character
+ * Return: 0 for opercase
  */
 int _islower(int c)
 {
