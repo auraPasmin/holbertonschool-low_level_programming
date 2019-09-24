@@ -1,10 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
+* print_alphabet_x10 - print alphabetx10
+* @void: no argument
+*/
 void print_alphabet_x10(void)
 {
 	char i;
@@ -12,11 +11,11 @@ void print_alphabet_x10(void)
 
 	for (q = 0; q <= 9; q++)
 	{
-	for (i = 'a'; i <= 'z'; i++)
-	{
-		_putchar(i);
-	}
-	i='a';
-	_putchar('\n');
+		for (i = 'a'; i <= 'z'; i++)
+		{
+			_putchar(i);
+		}
+		i = 'a';
+		_putchar('\n');
 	}
 }
