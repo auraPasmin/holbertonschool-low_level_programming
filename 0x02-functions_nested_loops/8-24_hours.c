@@ -1,26 +1,24 @@
 #include "holberton.h"
 
 /**
- * jack_bauer - starting from 00:00 to 23:59.
- * @void: does not return anything
- * Return: not return anithing
+ * jack_bauer - prints the hours and minutes
+ * Return: Returns void
  */
 void jack_bauer(void)
 {
-	int i, j;
+	int h, m;
 
-	for (i = 0; i < 24; i++)
+	for (h = 0; h < 24; h++)
 	{
-		for (j = 0; j < 60; j++)
+		for (m = 0; m < 60; m++)
 		{
-			_putchar(i / 10 + '0');
-			_putchar(i % 10 + '0');
+			_putchar(h / 10 + '0');
+			_putchar(h % 10 + '0');
 			_putchar(':');
-			_putchar(j / 10 + '0');
-			_putchar(j % 10 + '0');
+			_putchar(m / 10 + '0');
+			_putchar(m % 10 + '0');
 			_putchar('\n');
 		}
 	}
 
 }
-
