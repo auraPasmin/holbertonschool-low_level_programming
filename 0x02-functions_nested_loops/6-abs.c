@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * _abs - the absolute value of an integer
+ *@p: take a int
+ * Return: p
  */
 int _abs(int p)
 {
