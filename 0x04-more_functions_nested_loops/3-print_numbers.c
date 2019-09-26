@@ -2,6 +2,7 @@
 
 /**
   * print_numbers -  prints the numbers, from 0 to 9
+  * @void: no argument
   * Return: void
   */
 void print_numbers(void)
