@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
-  * _idigitr -  Returns 1 if c is a digit
+  * _isdigit -  Returns 1 if c is a digit
   * @c: take a int
-  * return: 1
+  * Return: 1 or 0
   */
 int _isdigit(int c)
 {
