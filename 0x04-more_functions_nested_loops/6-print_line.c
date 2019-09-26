@@ -2,8 +2,9 @@
 
 /**
   * print_line -  prints lines
-  * @n: take a character
-  * Return: void
+  * @n: take a int
+  * @c: take a int
+  * Return: On succes line.
   */
 void print_line(int n)
 {
