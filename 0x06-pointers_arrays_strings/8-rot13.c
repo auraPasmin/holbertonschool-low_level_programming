@@ -1,24 +1,26 @@
+#include "holberton.h"
 /**
- * rot13 - encondes a string using rot13
- * @s: a string
- * Return: a pointer to the string
+ * rot13 - Function to encode a string using rot13
+ * @c: Parameter passed to the function to process
+ * Return: Pointer to the encoded string
  */
-char *rot13(char *s)
-{
-	char first[] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
-	char second[] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
-	char *s_copy = s;
-	int index;
 
-	while (*s_copy != '\n')
+char *rot13(char *c)
+{
+	int i, j;
+	char c1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char c2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	
+	for ( i = 0; c[i] != '\0';i++)
 	{
-		for (index = 0; index < 26; index++)
+		for ( j = 0; c1[j] != '\0'; j++)
 		{
-			if (*s_copy == first[index])
+			if (c[i] == c1[j])
 			{
-				*s_copy = second[index];
+				c[i] = c2[j];
+				break;
 			}
 		}
 	}
-	return (s);
+	return (c);
 }
