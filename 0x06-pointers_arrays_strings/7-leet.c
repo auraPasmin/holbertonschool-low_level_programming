@@ -4,7 +4,7 @@
 /**
  * leet - change
  * @k: take a pointer, string.
- * Return: k
+ * Return: k encryptedi
  */
 char *leet(char *k)
 {
@@ -18,7 +18,7 @@ char *leet(char *k)
 		{
 		if (k[i] == c1[j])
 		{
-			k[i] = c2[i];
+			k[i] = c2[j];
 		}
 		}
 	}
