@@ -14,13 +14,15 @@ char *rot13(char *k)
 	char *c2 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 	char *k_pun = k;
 
-	while (*k_pun != '\0')
+	while (*k_pun != '\n')
 	{
 		for (i = 0; i < 26; i++)
+		{
 			if (*k_pun == c1[i])
 			{
 				*k_pun = c2[i];
 			}
+		}
 	}
 
 	return (k);
