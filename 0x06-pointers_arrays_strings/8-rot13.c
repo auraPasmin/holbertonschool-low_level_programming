@@ -8,21 +8,18 @@
  */
 char *rot13(char *k)
 {
-	int i, j;
+	int i;
 
 	char *c1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMOPQRSTUVWXYZ";
 	char *c2 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char *k_pun = k;
 
-	for (i = 0; k[i] != '\0'; i++)
+	while (*k_pun != '\0')
 	{
-		for (j = 0; c1[j] != '\0'; j++)
-			if (k[i] == c1[j])
+		for (i = 0; i < 26; i++)
+			if (*k_pun == c1[i])
 			{
-				k[i] = c2[j];
-			}
-			else if (k[i] == c2[j])
-			{
-				k[i] = c1[j];
+				*k_pun = c2[i];
 			}
 	}
 
