@@ -10,8 +10,8 @@ char *rot13(char *k)
 {
 	int i, j;
 
-	char *c1 = "abcdefghijklmABCDEFGHIJKLM";
-	char *c2 = "nopqrstuvwxyzNOPQRSTUVWXYZ";
+	char *c1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMOPQRSTUVWXYZ";
+	char *c2 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	for (i = 0; k[i] != '\0'; i++)
 	{
