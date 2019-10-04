@@ -8,12 +8,12 @@
 char *rot13(char *c)
 {
 	int i, j;
-	char c1[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char c1[i] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char c2[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	
-	for ( i = 0; c[i] != '\0';i++)
+
+	for (i = 0; c[i] != '\0'; i++)
 	{
-		for ( j = 0; c1[j] != '\0'; j++)
+		for (j = 0; c1[j] != '\0'; j++)
 		{
 			if (c[i] == c1[j])
 			{
