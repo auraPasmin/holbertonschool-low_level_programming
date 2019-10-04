@@ -1,29 +1,24 @@
-#include "holberton.h"
-#include <stdio.h>
-
 /**
- * rot13 - change
- * @k: take a pointer, string.
- * Return: k encryptedi
+ * rot13 - encondes a string using rot13
+ * @s: a string
+ * Return: a pointer to the string
  */
-char *rot13(char *k)
+char *rot13(char *s)
 {
-	int i;
+	char first[] = "aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ";
+	char second[] = "nNoOpPqQrRsStTuUvVwWxXyYzZaAbBcCdDeEfFgGhHiIjJkKlLmM";
+	char *s_copy = s;
+	int index;
 
-	char *c1 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMOPQRSTUVWXYZ";
-	char *c2 = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	char *k_pun = k;
-
-	while (*k_pun != '\n')
+	while (*s_copy != '\n')
 	{
-		for (i = 0; i < 26; i++)
+		for (index = 0; index < 26; index++)
 		{
-			if (*k_pun == c1[i])
+			if (*s_copy == first[index])
 			{
-				*k_pun = c2[i];
+				*s_copy = second[index];
 			}
 		}
 	}
-
-	return (k);
+	return (s);
 }
