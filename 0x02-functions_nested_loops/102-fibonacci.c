@@ -9,7 +9,7 @@ int main(void)
 {
 	int i;
 	long int n0 = 1;
-	long int n1 = 2;
+	long int n1 = 1;
 	long int fibo;
 
 	for (i = 0; i < 50; i++)
