@@ -14,11 +14,11 @@ int main(void)
 
 	for (i = 0; i < 50; i++)
 	{
+		printf("%ld", fibo);
 		if (i < 49)
 		{
 			printf(",");
 		}
-		printf("%lu", fibo);
 		fibo = n0;
 		n0 = n0 + n1;
 		n1 = fibo;
