@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <stdio.h>
 /**
   * main - Entry point
@@ -12,7 +11,7 @@ int main(void)
 
 	for (k = 0; k < 99; k++)
 	{
-		for (i = k++; i < 100; i++)
+		for (i = k + 1 ; i < 100; i++)
 		{
 			putchar(k / 10 + '0');
 			putchar(k % 10 + '0');
