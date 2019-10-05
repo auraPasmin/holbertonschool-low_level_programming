@@ -1,7 +1,7 @@
-#include "holberton.h"
 #include <stdioh.h>
 /**
  * main -Entry
+ * Descripcion:
  * Return: 0
  */
 int main(void)
