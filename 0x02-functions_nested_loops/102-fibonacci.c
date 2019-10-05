@@ -22,7 +22,7 @@ int main(void)
 		n0 = n0 + n1;
 		n1 = fibo;
 	}
-	_putchar('\n');
+	printf("\n");
 	return (0);
 }
 
