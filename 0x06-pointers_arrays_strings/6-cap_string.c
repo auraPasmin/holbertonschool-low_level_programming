@@ -8,16 +8,31 @@
  */
 char *cap_string(char *k)
 {
-	int size;
+	int i;
 
-	for (size = 0; k[size] != '\0'; size++)
+	for (i = 0; k[i] != '\0'; i++)
 	{
-		if( size == 0)
+		if (i == 0)
 		{
-		if (k[size] >= 96 && k[size] <= 123)
+		if (k[i] >= 96 && k[i] <= 123)
 		{
-			k[size] = k[size] - 32;
+			k[i] = k[i] - 32;
 		}
+		}
+		if (k[i] == ' ' || k[i] == '\t' || k[i] == '\n' || k[i] == ','
+				|| k[i] == ';' || k[i] == '.' || k[i] == '!' || k[i] == '?'
+				|| k[i] == '"' || k[i] == '(' || k[i] == ')' || k[i] == '{'
+				|| k[i] == '}')
+		{
+			i++;
+			if (k[i] == ' ' || k[i] == '\n')
+			{
+				i++;
+			}
+			if (k[i] >= 96 && k[i] <= 123)
+			{
+				k[i] = k[i] - 32;
+			}
 		}
 	}
 	return (k);
