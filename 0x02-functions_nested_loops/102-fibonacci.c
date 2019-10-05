@@ -1,15 +1,16 @@
 #include "holberton.h"
-
+#include <stdioh.h>
 /**
- * times_table - that prints the 9 times table, starting with 0.
- * Return: void no return anything
+ * main -Entry
+ * Return: 0
  */
-int main()
+int main(void)
 {
 	int i;
 	long int n0 = 1;
 	long int n1 = 1;
 	long int fibo = 0;
+
 	for (i = 0; i < 50; ++i)
 	{
 		printf("%ld", fibo);
