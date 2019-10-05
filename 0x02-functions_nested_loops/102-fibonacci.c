@@ -17,7 +17,6 @@ int main(void)
 		fibo = ne + na;
 		na = ne;
 		ne = fibo;
-		
 		if (i != 49)
 		{
 			printf("%ld, ", fibo);
