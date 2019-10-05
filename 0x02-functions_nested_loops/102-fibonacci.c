@@ -15,14 +15,15 @@ int main(void)
 	for (i = 0; i < 50; i++)
 	{
 		if (i < 49)
-			printf("%lu,", fibo);
-		else
-			printf("%lu", fibo);
+		{
+			printf(",");
+		}
+		printf("%lu", fibo);
 		fibo = n0;
 		n0 = n0 + n1;
 		n1 = fibo;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
 
