@@ -12,10 +12,10 @@ int main(void)
 	long int n1 = 1;
 	long int fibo;
 
-	for (i = 0; i < 50; ++i)
+	for (i = 0; i < 50; i++)
 	{
 		if (i < 49)
-			printf("%ld", fibo);
+			printf("%ld,", fibo);
 		else
 			printf("%ld", fibo);
 		fibo = n0;
