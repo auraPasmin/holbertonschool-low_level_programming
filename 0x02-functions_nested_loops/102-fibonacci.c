@@ -8,22 +8,25 @@
 int main(void)
 {
 	int i;
-	long int n0 = 1;
-	long int n1 = 1;
+	long int na = 0;
+	long int ne = 1;
 	long int fibo;
 
 	for (i = 0; i < 50; i++)
 	{
-		printf("%ld", fibo);
+		fibo = ne + na;
+		na = ne;
+		ne = fibo;
+		
 		if (i != 49)
 		{
-			printf(",");
+			printf("%ld, ", fibo);
 		}
-		fibo = n0;
-		n0 = n0 + n1;
-		n1 = fibo;
+		else
+		{
+			printf("%ld\n", fibo);
+		}
 	}
-	putchar('\n');
 	return (0);
 }
 
