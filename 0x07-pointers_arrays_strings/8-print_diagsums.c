@@ -4,7 +4,7 @@
 /**
  * print_diagsums -  diaGONALS	.
  * @a: this a pointer
- * size: int
+ * @size: int
  * Return: void
  */
 void print_diagsums(int *a, int size)
