@@ -10,27 +10,33 @@
  */
 int main(int argc, char **argv)
 {
-	int i = 0;
-	int r, dex;
+	int i = 1;
+	int r = 0;
+	int dex, aux;
 
 	if (argc < 2)
 	{
-		printf("%d\n", 0);
+		printf("%d\n", r);
 	}
 	else
 	{
-		while (i < argc)
+		for (;i < argc; i++)
 		{
-			for (dex = 0;argv[i][dex] != '\0'; dex++)
+			aux = 0;
+			for (dex = 0; argv[i][dex] != '\0'; dex++)
 			{
-				if (isdigit(argv[i][dex] == 0))
+				
+				if ((int)argv[i][dex] < 48 ||(int)argv[i][dex] > 57 )
 				{
 					printf("%s\n", "Error");
 					return (1);
 				}
+				aux = 1;
 			}
-			r = r + atoi(argv[i]);
-			i++;
+			if ( aux== 1)
+			{
+				r = r + atoi(argv[i]);
+			}
 		}
 		printf("%d\n", r);
 	}
