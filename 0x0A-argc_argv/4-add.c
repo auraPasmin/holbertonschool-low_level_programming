@@ -6,7 +6,7 @@
  * main - Program to add positive numbers only
  * @argc: Argument count
  * @argv: Argument vector
- * Return: 0 if success and 1 if otherwise
+ * Return: 0 or 1
  */
 int main(int argc, char **argv)
 {
@@ -20,20 +20,20 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		for (;i < argc; i++)
+		for (; i < argc; i++)
 		{
 			aux = 0;
+
 			for (dex = 0; argv[i][dex] != '\0'; dex++)
 			{
-				
-				if ((int)argv[i][dex] < 48 ||(int)argv[i][dex] > 57 )
+				if ((int)argv[i][dex] < 48 || (int)argv[i][dex] > 57)
 				{
 					printf("%s\n", "Error");
 					return (1);
 				}
 				aux = 1;
 			}
-			if ( aux== 1)
+			if (aux == 1)
 			{
 				r = r + atoi(argv[i]);
 			}
