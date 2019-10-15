@@ -18,6 +18,10 @@ char *create_array(unsigned int size, char c)
 		return (NULL);
 	}
 	ary = malloc(size * sizeof(c));
+	if (ary == NULL)
+	{
+		return (NULL);
+	}
 	if (size > 0)
 	{
 		for (i = 0; i < size; i++)
@@ -25,10 +29,6 @@ char *create_array(unsigned int size, char c)
 			ary[i] = c;
 		}
 		return (ary);
-	}
-	if (ary == NULL)
-	{
-		return (NULL);
 	}
 	return (ary);
 }
