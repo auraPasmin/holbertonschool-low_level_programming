@@ -10,35 +10,31 @@
 */
 char *argstostr(int ac, char **av)
 {
-	int i, j, k = 0, len = 0;
-	int **arry;
+	int i, j;
+	int k = 0;
+	int len = 0;
+	char *arry;
 
 	if (ac <= 0)
+		return (NULL);
+	if (av == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
 	{
-	return (NULL);
-	}
-	if (av == null)
-	{
-		return (NULL)
-	}
-	for ( i = 0; i < ac; i++)
-	{
-		for ( j = 0; av[i][j] != '\0'; j++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
 		}
-		size = size + j + 1;
+		len = len + j + 1;
 	}
-	arry = malloc(sizeof(char) * size + 1);
+	arry = malloc(sizeof(char) * len + 1);
 	if (arry == NULL)
-	{
-	return (NULL);
-	}
+		return (NULL);
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
 		{
 			arry[k] = av[i][j];
-			k++
+			k++;
 		}
 		arry[k] = '\n';
 		k++;
