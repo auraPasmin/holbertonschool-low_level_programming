@@ -18,12 +18,13 @@ int (*get_op_func(char *s))(int, int)
 		{"%", op_mod},
 		{NULL, NULL}
 	};
-	int i;
+	int size = 0;
 
-	for (i = 0; i < 5; i++)
+	while (ops[size].op != NULL)
 	{
-		if (s[0] == *(ops[i].op))
-			return (ops[i].f);
+		if (strcmp(s, ops[size].op) == 0)
+			break;
+		size++;
 	}
-	return (NULL);
+	return (ops[size].f);
 }
