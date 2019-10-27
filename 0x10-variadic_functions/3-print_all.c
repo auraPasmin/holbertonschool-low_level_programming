@@ -1,5 +1,4 @@
 # include  "variadic_functions.h"
-# include  <stdarg.h>
 /**
  * print_char - sum the all parameters
  * @args: char is a usigned int
