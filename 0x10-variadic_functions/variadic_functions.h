@@ -1,8 +1,10 @@
 #ifndef VARIADIC_FUNCTIONS_H
 #define VARIADIC_FUNCTIONS_H
 
-#include  <stdlib.h>
-#include  <stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <strings.h>
 typedef struct arg
 {
 	char *format;
@@ -13,4 +15,4 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 
-# endif
+# endif /* VARIADIC_FUNCTIONS_H */
