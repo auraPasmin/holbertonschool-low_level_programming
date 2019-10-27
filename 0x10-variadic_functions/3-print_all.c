@@ -16,7 +16,7 @@ void print_char(va_list args)
  */
 void print_integer(va_list args)
 {
-printf("%d", va_arg(args, int));
+	printf("%d", va_arg(args, int));
 }
 /**
  * print_float - sum the all parameters
@@ -25,7 +25,7 @@ printf("%d", va_arg(args, int));
  */
 void print_float(va_list args)
 {
-printf("%f", va_arg(args, double));
+	printf("%f", va_arg(args, double));
 }
 /**
  * print_string - sum the all parameters
@@ -56,10 +56,10 @@ void print_all(const char * const format, ...)
 		{"s", print_string},
 		{NULL, NULL}
 	};
-	va_start(args, format);
 	int i = 0;
 	char *separ = "";
 
+	va_start(args, format);
 	while (format != NULL && format[i] != '\0')
 	{
 		int j = 0;
