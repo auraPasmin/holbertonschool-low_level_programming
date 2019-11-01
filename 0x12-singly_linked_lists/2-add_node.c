@@ -13,9 +13,9 @@ list_t *add_node(list_t **head, const char *str)
 
 	if (co == NULL)
 		return (NULL);
-
-	for (i =0; str[i] != '\0'; i++)
-		;
+	for (i = 0; str[i] != '\0'; i++)
+	{
+	}
 
 	co->str = strdup(str);
 	co->len = i;
