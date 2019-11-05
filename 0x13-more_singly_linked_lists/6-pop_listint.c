@@ -1,21 +1,19 @@
 #include "lists.h"
 /**
- * pop_listint -  deletes the firts node
- * @head: list_t
- * Return: firt node data.
+ * pop_listint - remove the node to the list
+ * @head: is the first node
+ * Return:first node or 0 if it is empty
  */
 int pop_listint(listint_t **head)
 {
-	int temp;
-	listint_t *copia;
+	listint_t *d = *head;
+	int n;
 
-	if (head != NULL)
+	if (*head != NULL && head != NULL)
 	{
-		copia = *head;
-		temp = copia->temp;
-		*head = copia->next;
-		free(copia);
-		return (temp);
+		n = d->n;
+		*head = d->next;
+		free(d);
 	}
-	return (0);
+	return (n);
 }
