@@ -1,25 +1,25 @@
 #include "lists.h"
 
 /**
- * get_nodeint_at_index - returns the nth node
- * @head: listing
- * @index: unsigned int
- * Return: head node
+ * get_nodeint_at_index - nth node
+ * @head: node
+ * @index: count
+ * Return: node
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
-	int i;
-	i = index;
-	
-	if (*head != NULL)
-	{
+	listint_t *n;
+	unsigned int i = 0;
 
-		while ( i < index)
-		{
-			head = head->next;
-			i--;
-		}
-		return (head);
+	n = head;
+	if (head != NULL)
+	{
+	while (n && i < index)
+	{
+		n = n->next;
+		i++;
+	}
+	return (n);
 	}
 	return (0);
- }
+}
