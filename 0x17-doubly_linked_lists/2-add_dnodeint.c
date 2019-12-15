@@ -1,20 +1,21 @@
 #include "lists.h"
 
 /**
- * dlistint_len - Function that returns the number of elements
- * @h: The first node of the doubly linked list
- * Return: Number of elements in the linked list
+ * add_dnodeint - Write a function what add a new
+ * @head: is head
+ * @n: is a count
+ * Return: return node
  */
-
-size_t dlistint_len(const dlistint_t *h)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	const dlistint_t *temp = h;
-	size_t c = 0;
+	dlistint_t *new;
 
-	while (temp != NULL)
-	{
-		c++;
-		temp = temp->next;
-	}
-	return (c);
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (NULL);
+	new->n = n;
+	new->next = *head;
+	new->prev = NULL;
+	*head = new;
+	return (new);
 }
