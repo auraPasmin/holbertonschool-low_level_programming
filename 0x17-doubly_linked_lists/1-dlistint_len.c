@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * print_dlistint - Function that prints all the elements of  lisi
+ * dlistint_len- Function that prints all the elements of  lisi
  *@h: A pointer
  *Return: The nmber of nodes in the doubly linked list of type dlistint_t
  */
