@@ -7,13 +7,13 @@ RM=rm
 all: $(SRC) $(NAME)
 
 $(NAME): $(OBJ)
-        $(CC) $(OBJ) -o $@
+	$(CC) $(OBJ) -o $@
 
 clean:
-        $(RM) -f *~ $(NAME)
+	$(RM) -f *~ $(NAME)
 
 oclean:
-        $(RM) -f $(OBJ)
+	$(RM) -f $(OBJ)
 
 fclean: clean oclean
 
